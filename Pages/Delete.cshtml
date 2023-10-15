@@ -1,0 +1,21 @@
+﻿@page "/delete"
+@model Lab2.Pages.DeleteModel
+@{
+	ViewData["Title"] = "Delete data";
+}
+@if (Model.IsDeleting) {
+	<div class="text-center">
+		<h1 class="display-4">Удаление элмента</h1>
+	</div>
+
+	<form class = "form-horizontal" method = "post">
+		<p>Вы уверены, что хотите удалить?</p>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-outline-danger">Удалить</button>
+			</div>
+		</div>
+
+	</form>
+}
+<a asp-page = "/Index">Назад</a>
